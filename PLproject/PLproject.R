@@ -1,4 +1,7 @@
-
+# Ege University ICI Programming Languages Project
+# R Language Phone Book Application v1.0
+# Mustafa Guclu
+# May 2019 - GNU GPL v3 Licensed
 
 insert.function <- function() {
   
