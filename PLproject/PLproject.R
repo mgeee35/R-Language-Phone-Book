@@ -4,7 +4,6 @@
 # May 2019 - GNU GPL v3 Licensed
 
 insert.function <- function() {
-  
   repeat {
     
     surname <<- readline("surname: ")
@@ -32,6 +31,8 @@ insert.function <- function() {
 }
 
 
+#choice 1 for searching via surname
+#choice 2 for searching via phone number
 search.function <- function() {
   search_no = readline("Soyad aramasi icin 1, tel aramasi icin 2'yi tuslayin: ")
   if (search_no == 1) {
@@ -43,13 +44,16 @@ search.function <- function() {
     print(first.data[which(first.data$phone == searching),])
     cat(" *******************************\n")
   } else {
-    cat(" Yanlis secim yaptiniz. Tekrar deneyin.\n")
+    cat(" Yanlis secim yaptiniz. Tekrar deneyin.\n") #wrong choice, try again!
     search.function()
   }
 
 }
 
 
+#choice 1 for removing via surname
+#choice 2 for removing via phone number
+#choice 3 for removing whole records
 remove.function <- function() {
   remove_no = readline("Soyad silme icin 1, tel silme icin 2'yi tuslayin butun kayitlari silmek icin 3'u tuslayin: ")
   if (remove_no == 1) {
@@ -68,7 +72,7 @@ remove.function <- function() {
     cat(" Tum kayitlar silindi.\n")
     cat(" *******************************\n")    
   } else {
-    cat(" Yanlis secim yaptiniz. Tekrar deneyin.\n")
+    cat(" Yanlis secim yaptiniz. Tekrar deneyin.\n") #wrong choice, try again!
     remove.function()
   }
   main.menu()
@@ -105,7 +109,7 @@ choice.function <- function () {
   } else if (number == 9) {
     exit.function()
   } else {
-    cat(" Yanlis secim yaptiniz. Tekrar deneyin.\n")
+    cat(" Yanlis secim yaptiniz. Tekrar deneyin.\n") #wrong choice, try again!
     main.menu()
   }
 }
